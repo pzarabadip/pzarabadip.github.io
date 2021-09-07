@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Pezhman Zarabadi-Poor"
 title_separator          : "-"
-name                     : &name "Pezhman Zarabadi-Poor"
+name                     : &name "Pezhman\n Zarabadi-Poor"
 description              : &description "Computational Materials Scientist"
 url                      : https://pzarabadip.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
