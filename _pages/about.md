@@ -8,25 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-Welcome! I am a Postdoctoral Research Fellow in the
-[Weidenbaum Center on the Economy, Government, and Public Policy](https://wc.wustl.edu/) 
-and [Department of Political Science](https://polisci.wustl.edu/) at
-[Washington University in St. Louis](https://wustl.edu/). I am also an
-affiliated researcher with the
-[Data-driven Analysis of Peace Project](https://dapp-lab.org) lab. I specialize
-in International Relations and Political Methodology. I earned my Ph.D in
-Political Science from the
-[University *of* North Carolina *at* Chapel Hill](https://www.unc.edu/) and my
-B.A. in Political Science from [Haverford College](https://www.haverford.edu/).
+I am eager in benefiting from the synergy between my computational skills and experimental background to tackle challenging energy and
+environmental obstacles at the intersection of material and computational science. I have developed the experimental skills throughout
+my MSc and PhD studies while I have learned computational techniques after my PhD on my own interest and effort. Although I am able to
+conduct independent research projects, I thrive working as a team member and have proactively collaborated with researchers at different
+institutions around the world to complete various projects.
 
-My work has been [published](publications) or is forthcoming in
-*International Studies Quarterly*, *Conflict Management and Peace Science*,
-*Political Science Research and Methods*, and *PS: Political Science & Politics*,
-among other outlets. My [research](research) explores the causes and
-consequences of political violence using a broad variety of methods such as
-latent variable models, geospatial analysis, and big data. While I primarily
-focus on civil conflict, I also examine contentious political phenomena
-including terrorism and economic statecraft, and develop new measures of
-institutions in international relations. I have [teaching](teaching) experience
-in both international relations and quantitative methodology, and am a certified
-instructor with [The Carpentries](https://carpentries.org/).
+
+I am currently working in [University of Bath](www.bath.ac.uk) as research associated in the research groups of [Prof. Saiful Islam](https://people.bath.ac.uk/msi20/index.shtml) and [Dr. Benjamin Morgan](https://morgan-group-bath.github.io/). We are performing research on Li-ion batteries within the [CATMAT project](https://catmatproject.com/) which is funded by [Faraday Institution](https://faraday.ac.uk/) on "Next Generation Lithium Ion Cathode Materials".
+
