@@ -86,13 +86,18 @@ for pubsource in publist:
                 
             pub_date = pub_year+"-"+pub_month+"-"+pub_day
             
+            volume = b["volume"]
+            number = b["number"]
+
+
             #strip out {} as needed (some bibtex entries that maintain formatting)
             clean_title = b["title"].replace("{", "").replace("}","").replace("\\","").replace(" ","-")    
 
             url_slug = re.sub("\\[.*\\]|[^a-zA-Z0-9_-]", "", clean_title)
             url_slug = url_slug.replace("--","-")
 
-            md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
+            # md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
+            md_filename = (str(pub_date) + "-" + bib_id + ".md").replace("--","-")
             html_filename = (str(pub_date) + "-" + url_slug).replace("--","-")
 
             #Build Citation from text
@@ -100,16 +105,19 @@ for pubsource in publist:
 
             #citation authors - todo - add highlighting for primary author?
             for author in bibdata.entries[bib_id].persons["author"]:
-                citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
+                try:
+                    citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
+                except:
+                    print(author)
 
             #citation title
-            citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
+            # citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
 
             #add venue logic depending on citation type
             venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}","").replace("\\","")
 
             citation = citation + " " + html_escape(venue)
-            citation = citation + ", " + pub_year + "."
+            citation = citation + ", " + pub_year + "," + volume + "," + number + "."
 
             
             ## YAML variables
@@ -132,7 +140,8 @@ for pubsource in publist:
             url = False
             if "url" in b.keys():
                 if len(str(b["url"])) > 5:
-                    md += "\npaperurl: '" + b["url"] + "'"
+                    # md += "\npaperurl: '" + b["url"] + "'"
+                    md += "\nurl: '" + b["url"] + "'"
                     url = True
 
             md += "\ncitation: '" + html_escape(citation) + "'"
@@ -144,10 +153,10 @@ for pubsource in publist:
             if note:
                 md += "\n" + html_escape(b["note"]) + "\n"
 
-            if url:
-                md += "\n[Access paper here](" + b["url"] + "){:target=\"_blank\"}\n" 
-            else:
-                md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
+            # if url:
+            #     md += "\n[Access paper here](" + b["url"] + "){:target=\"_blank\"}\n" 
+            # else:
+            #     md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
 
             md_filename = os.path.basename(md_filename)
 
